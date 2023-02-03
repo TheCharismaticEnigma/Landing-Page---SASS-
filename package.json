@@ -1,0 +1,19 @@
+{
+  "name": "landing-page-sass",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile": "sass src/SCSS/main.scss dist/main.css",
+    "watch": "sass src/SCSS/main.scss dist/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCharismaticEnigma/Landing-Page-SASS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheCharismaticEnigma/Landing-Page-SASS/issues"
+  },
+  "homepage": "https://github.com/TheCharismaticEnigma/Landing-Page-SASS#readme"
+}

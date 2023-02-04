@@ -1,0 +1,90 @@
+// Styles for Navigation Bar
+// Separate Container from content and structure from skin.
+
+@use '../utils/mixins' as mixins;
+
+%transition {
+  transition: all 250ms ease-out;
+}
+
+.nav {
+  @include mixins.container();
+  @include mixins.flexContainer(row);
+  justify-content: space-around;
+  align-items: center;
+  gap: 5%;
+  padding: 0.5rem 0;
+  background-color: peachpuff;
+
+  &__list,
+  &__container {
+    @include mixins.flexContainer(row);
+    padding: 0.5rem;
+  }
+
+  &__list {
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__container {
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__container p {
+    margin: auto 0;
+    font-size: 2rem;
+    font-family: cursive;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    cursor: pointer;
+  }
+
+  &__link {
+    position: relative;
+    font-family: cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.9rem;
+    @extend %transition;
+  }
+
+  &__link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5%;
+    height: 1.5px;
+    width: 100%;
+    background: maroon;
+    opacity: 0;
+    @extend %transition;
+  }
+
+  &__link:hover {
+    display: inline-block;
+    transform: translateY(10%);
+    color: maroon;
+  }
+
+  &__link:hover::after {
+    opacity: 1;
+    left: 0%;
+    width: 100%;
+    transform: translateY(10%);
+  }
+
+  &__icon {
+    cursor: pointer;
+    transition: all 150ms ease-out;
+  }
+
+  &__icon:hover {
+    transform: translateY(15%);
+    color: rgb(90, 45, 45);
+  }
+}

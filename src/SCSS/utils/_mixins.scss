@@ -1,0 +1,17 @@
+$laptopWidth: 108rem;
+
+@mixin container($device-width: $laptopWidth) {
+  width: min(100%, $device-width);
+  margin: 0 auto;
+}
+
+@mixin flexContainer($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin centerElements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

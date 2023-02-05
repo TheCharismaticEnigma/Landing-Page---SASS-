@@ -3,6 +3,10 @@
 
 $secondary-Color: rgb(184, 95, 79);
 
+%bounce {
+  animation: name duration timing-function delay iteration-count direction;
+}
+
 .hero {
   height: 75vh;
   @include utils.container();
@@ -29,7 +33,7 @@ $secondary-Color: rgb(184, 95, 79);
   &__content {
     color: rgba(0, 0, 0, 0.7);
     font-family: fonts.$primary-font;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 900;
     letter-spacing: 1px;
     margin-right: auto;
@@ -40,10 +44,32 @@ $secondary-Color: rgb(184, 95, 79);
     @include utils.flexContainer(row);
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
     gap: 2rem;
-    width: min(100%, 20rem);
+    width: min(100%, 22rem);
     padding: 0.5rem;
+  }
+
+  .action__icon-wrapper {
+    cursor: pointer;
+    background: linear-gradient(120deg, rgb(207, 146, 135), tomato);
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: all 300ms ease-out;
+    box-shadow: 0px 0px 3px lightblue;
+  }
+
+  .action__icon-wrapper:hover {
+    transform: scale(1.1);
+  }
+
+  .action__icon {
+    pointer-events: none;
+    color: rgab(0, 0, 0, 0.8);
+    transition: all 300ms ease-out;
+  }
+
+  .action__icon:hover {
+    color: black;
   }
 
   .hero__link {
@@ -63,16 +89,20 @@ $secondary-Color: rgb(184, 95, 79);
   }
 
   &__image-wrapper {
+    position: relative;
     width: 45%;
     height: 100%;
     box-shadow: 1px 1px 0 lightgray;
     border-radius: 3px;
+    text-align: right;
   }
 
   &__image {
+    object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: inherit;
+    z-index: 1;
   }
 
   &__image-png {

@@ -396,7 +396,7 @@ h3 {
 .hero__content {
   color: rgba(0, 0, 0, 0.7);
   font-family: "Bad Script", cursive;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: 1px;
   margin-right: auto;
@@ -407,10 +407,28 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
   gap: 2rem;
-  width: min(100%, 20rem);
+  width: min(100%, 22rem);
   padding: 0.5rem;
+}
+.hero .action__icon-wrapper {
+  cursor: pointer;
+  background: linear-gradient(120deg, rgb(207, 146, 135), tomato);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  transition: all 300ms ease-out;
+  box-shadow: 0px 0px 3px lightblue;
+}
+.hero .action__icon-wrapper:hover {
+  transform: scale(1.1);
+}
+.hero .action__icon {
+  pointer-events: none;
+  color: rgab(0, 0, 0, 0.8);
+  transition: all 300ms ease-out;
+}
+.hero .action__icon:hover {
+  color: black;
 }
 .hero .hero__link {
   color: rgb(184, 95, 79);
@@ -427,22 +445,26 @@ h3 {
   transform: skewY(-5deg);
 }
 .hero__image-wrapper {
+  position: relative;
   width: 45%;
   height: 100%;
   box-shadow: 1px 1px 0 lightgray;
   border-radius: 3px;
+  text-align: right;
 }
 .hero__image {
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: inherit;
+  z-index: 1;
 }
 .hero__image-png {
   display: none;
 }
 
 .nav__link::after, .nav__link {
-  transition: all 250ms ease-out;
+  transition: all 280ms ease-out;
 }
 
 .nav {
@@ -453,8 +475,8 @@ h3 {
   justify-content: space-around;
   align-items: center;
   gap: 5%;
+  margin-top: 1%;
   padding: 0.5rem 0;
-  background-color: peachpuff;
 }
 .nav__list, .nav__container {
   display: flex;
@@ -499,7 +521,7 @@ h3 {
 }
 .nav__link:hover {
   display: inline-block;
-  transform: translateY(10%);
+  transform: translateY(15%);
   color: maroon;
 }
 .nav__link:hover::after {

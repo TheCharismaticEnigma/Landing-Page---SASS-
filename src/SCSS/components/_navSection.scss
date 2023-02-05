@@ -4,7 +4,7 @@
 @use '../utils/mixins' as mixins;
 
 %transition {
-  transition: all 250ms ease-out;
+  transition: all 280ms ease-out;
 }
 
 .nav {
@@ -13,8 +13,9 @@
   justify-content: space-around;
   align-items: center;
   gap: 5%;
+  margin-top: 1%;
   padding: 0.5rem 0;
-  background-color: peachpuff;
+  // background-color: peachpuff;
 
   &__list,
   &__container {
@@ -67,7 +68,7 @@
 
   &__link:hover {
     display: inline-block;
-    transform: translateY(10%);
+    transform: translateY(15%);
     color: maroon;
   }
 

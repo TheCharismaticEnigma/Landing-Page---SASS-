@@ -33,7 +33,7 @@ $secondary-Color: rgb(184, 95, 79);
   &__content {
     color: rgba(0, 0, 0, 0.7);
     font-family: fonts.$primary-font;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 900;
     letter-spacing: 1px;
     margin-right: auto;
@@ -45,7 +45,7 @@ $secondary-Color: rgb(184, 95, 79);
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    width: min(100%, 22rem);
+    width: min(100%, 25rem);
     padding: 0.5rem;
   }
 
@@ -64,7 +64,7 @@ $secondary-Color: rgb(184, 95, 79);
 
   .action__icon {
     pointer-events: none;
-    color: rgab(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     transition: all 300ms ease-out;
   }
 
@@ -76,7 +76,7 @@ $secondary-Color: rgb(184, 95, 79);
     color: $secondary-Color;
     text-transform: capitalize;
     font-size: 3rem;
-    font-family: fonts.$primary-font;
+    font-family: fonts.$secondary-font;
     font-weight: 900;
     letter-spacing: 1.5px;
     transition: all 300ms ease-out;
@@ -85,7 +85,8 @@ $secondary-Color: rgb(184, 95, 79);
   .hero__link:hover {
     font-size: 3rem;
     color: black;
-    transform: skewY(-5deg);
+    transform: translateY(5%) skewY(-5deg);
+    transform-origin: center;
   }
 
   &__image-wrapper {

@@ -5,6 +5,11 @@ $laptopWidth: 108rem;
   margin: 0 auto;
 }
 
+@mixin gridContainer() {
+  display: grid;
+  display: flex;
+}
+
 @mixin flexContainer($direction: row) {
   display: flex;
   flex-direction: $direction;
